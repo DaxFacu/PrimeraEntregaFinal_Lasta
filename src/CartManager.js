@@ -18,6 +18,7 @@ export class CartManager {
     };
 
     this.writeCarts(newCart);
+    return newCart;
   }
 
   writeCarts(product) {
@@ -57,8 +58,8 @@ export class CartManager {
     const readCarts = this.getCarts();
     const cart = this.getCartById(cartId);
     const findProduct = productManager.getProductById(productId);
-    console.log("cart " + cart);
-    console.log("productid " + findProduct.id);
+    // console.log("cart " + cart);
+    // console.log("productid " + findProduct.id);
     if (findProduct && cart) {
       const findproductCartById = cart.products.find(
         (product) => product.product === productId

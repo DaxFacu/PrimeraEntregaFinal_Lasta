@@ -47,6 +47,7 @@ productManagerRouter.post("/", (req, res) => {
   const products = req.body;
 
   const addProduct = productManager.addProduct(products);
+  console.log(addProduct);
 
   if (addProduct) {
     return res.status(201).json({

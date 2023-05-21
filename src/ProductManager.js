@@ -33,7 +33,9 @@ export class ProductManager {
         );
       } else {
         ++this.#maxId;
+        //this.writeProducts(newProduct);
         this.writeProducts(newProduct);
+        return newProduct;
       }
     }
   }
